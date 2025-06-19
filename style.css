@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+img {
+    width: 100%;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(245, 245, 245);
+    height: auto;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo-block {
+    background-color: rgb(254, 229, 41);
+    width: 20%;
+    clip-path: polygon(50% 0%, 100% 100%, 100% 100%, 0% 100%, 0 0);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.icon-img {
+    max-width: 130px;
+    margin-bottom: 0.7rem;
+}
+
+.pages-links-block {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.pages-links a {
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: rgb(153, 153, 153);
+    font-size: 38pt;
+}
+
+.pages-links a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(92, 10, 190);
+    transition: all 0.3s ease;
+}
+
+.pages-links a:hover {
+    color: rgb(92, 10, 190);
+}
+
+.pages-links a:hover::after {
+    width: 85%;
+}
+
+.user-block {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: end;
+    background-color: rgb(92, 10, 190);
+    width: 20%;
+    padding: 1.05rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+}
+
+.users-links a {
+    color: white;
+    font-size: 20pt;
+    margin-right: 1rem;
+    display: block;
+}
+
+.users-links a:hover {
+    transform: translateX(-10px);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    margin-top: 2rem;
+    width: 60%;
+    background-color: rgb(254, 229, 41);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 6px 10px 12px rgb(187, 187, 187);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 4rem;
+    margin-top: 1rem;
+}
+
+.title-block {
+    margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30pt;
+    color: rgb(92, 10, 190);
+}
+
+.title-block a {
+    color: rgb(0, 255, 204);
+    display: block;
+}
+
+.title-block a:hover {
+    transform: scale(1.05);
+}
+
+.title-block::after {
+    position: absolute;
+    content: "";
+    background-color: rgb(92, 10, 190);
+    height: 4px;
+    width: 100%;
+    bottom: -1rem;
+    left: 0;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: 22pt;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(92, 10, 190);
+}
+
+.input-text:focus ~ .text-wraper,
+.input-text:valid ~ .text-wraper {
+    transform: translateY(-1.8rem) translateX(-1rem);
+    font-size: 16pt;
+    color: rgb(153, 153, 153);
+    border-color: rgb(153, 153, 153);
+}
+
+.input-text:focus,
+.input-text:valid {
+    border-color: rgb(153, 153, 153);
+    color: rgb(92, 10, 190);
+}
+
+.first-label {
+    margin-top: 1rem;
+}
+
+.text-wraper {
+    position: absolute;
+    font-size: 22pt;
+    margin-left: -36rem;
+    margin-top: 1rem;
+    color: rgb(92, 10, 190);
+    pointer-events: none;
+}
+
+.login-butoon {
+    padding: 1rem 0;
+    font-size: 22pt;
+    border-radius: 15px;
+    background-color: rgb(92, 10, 190);
+    color: white;
+}
+
+.login-butoon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 10px 8px rgb(0, 255, 204);
+}
+
+.footer-block {
+    margin-top: 2rem;
+    display: flex;
+    align-items: end;
+}
+
+footer {
+    background-color: rgb(92, 10, 190);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+@media (width < 1750px) {
+    .pages-links a {
+        font-size: 34pt;
+    }
+}
+
+@media (width < 1650px) {
+    .pages-links a {
+        font-size: 30pt;
+    }
+}
+
+@media (width < 1470px) {
+    .pages-links a {
+        font-size: 26pt;
+    }
+}
+
+@media (width < 1350px) {
+    .pages-links a {
+        font-size: 22pt;
+    }
+}
+
+@media (width < 1160px) {
+    .pages-links a {
+        font-size: 20pt;
+    }
+}
+
+@media (width < 1100px) {
+    .pages-links-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0px;
+    }
+    .logo-block {
+        width: 25%;
+    }
+    .user-block {
+        width: 30%;
+    }
+}
+
+@media (width < 850px) {
+    .pages-links-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 0px;
+    }
+    .logo-block {
+        width: 40%;
+    }
+    .user-block {
+        width: 40%;
+    }
+}
+
+@media (width < 650px) {
+    .logo-block {
+        clip-path: polygon(0 0, 70% 0, 100% 60%, 100% 100%, 0 100%);
+        align-items: center;
+        width: 25%;
+    }
+    .pages-links a {
+        font-size: 14pt;
+    }
+    .user-block {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 30%);
+        width: 25%;
+        padding-right: 0;
+    }
+    .users-links a {
+        font-size: 14pt;
+    }
+}
